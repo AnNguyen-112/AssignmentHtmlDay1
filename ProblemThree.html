@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Nested Tables and Shared Border</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        /* Outer table border */
+        .outer-table {
+            border: 1px solid #000;
+        }
+        /* Inner tables with shared border */
+        .inner-table {
+            width: 100%;
+            border-left: 1px solid #000; /* Add left border */
+            border-top: 1px solid #000; /* Add top border */
+        }
+        /* Remove the right and bottom borders for the last inner table */
+        .inner-table td {
+            border-right: 1px solid #000; /* Add right border to cells */
+            border-bottom: 1px solid #000; /* Add bottom border to cells */
+        }
+        .inner-table td:last-child {
+            border-right: none; /* Remove right border from last cell */
+        }
+        .inner-table tr:last-child td {
+            border-bottom: none; /* Remove bottom border from last row */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Table with two columns -->
+<table>
+    <tr>
+        <!-- First column with logo and title -->
+        <td style="width: 50%; text-align: left;">
+            <!-- Linking Antra Logo to antra.net -->
+            <a href="https://antra.net/" target="_blank">
+                <img src="antra-logo.png" alt="Antra Logo" class="logo">
+            </a>
+            <h1>Antra Inc.</h1>
+        </td>
+        
+        <!-- Second column with two nested tables horizontally -->
+        <td style="width: 50%;">
+            <!-- Outer Table (contains two inner tables) -->
+            <table class="outer-table">
+                <tr>
+                    <!-- First Inner Table (Left Side) -->
+                    <td style="width: 50%; padding-right: 20px; vertical-align: top;">
+                        <table class="inner-table">
+                            <h1>Software</h1>
+                        </table>
+                    </td>
+
+                    <!-- Second Inner Table (Right Side) -->
+                    <td style="width: 50%; vertical-align: top;">
+                        <table class="inner-table">
+                           <h1>Developer</h1>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
