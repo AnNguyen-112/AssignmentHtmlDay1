@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Tables with Bootstrap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      table {
+        border: 2px solid green;
+        width: 100%;
+        margin: 5px 0;
+        border-spacing: 2px;
+      }
+
+      td {
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      .nested-table {
+        width: 100%;
+        border: 1px solid blue;
+      }
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <table class="table">
+      <!-- First Row -->
+      <tr>
+        <td colspan="4">
+          
+          <a href="https://antra.com" target="_blank">Antra LIFE</a>
+        </td>
+      </tr>
+
+      <!-- Second Row -->
+      <tr>
+        <td colspan="2">
+          <a href="https://www.google.com" target="_blank">Google</a>
+        </td>
+        <td colspan="2">
+          
+          <a href="https://github.com/" target="_blank">Github</a>
+        </td>
+      </tr>
+
+      <!-- Nested Table in Row 3 -->
+      <tr>
+        <td colspan="1">
+          
+          <a href="https://www.facebook.com/" target="_blank">fb
+        <td colspan="1">
+          
+          <a href="https://mail.google.com/" target="_blank">Gmail</a>
+        </td>
+        <td colspan="1">
+    
+          <a href="https://www.google.com" target="_blank">Youtube</a>
+        </td>
+        <td colspan="1">
+    
+          <a href="https://2048.ninja/" target="_blank">2048</a>
+        </td>
+      </tr>
+
+      <!-- Third Row with Nested Table -->
+      <tr>
+        <td colspan="4">
+          <table class="nested-table">
+            <tr>
+              <td colspan="1">
+                
+                <a href="https://www.nusr-et.com.tr/" target="_blank">Food</a>
+              </td>
+              <td colspan="2">
+                
+                <a href="https://www.leagueoflegends.com/" target="_blank">Game</a>
+              </td>
+              <td colspan="1">
+                <table class="nested-table">
+                  <tr>
+                    <td>
+                      
+                      <a href="https://www.facebook.com/" target="_blank"
+                        >Social Life</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      
+                      <a href="https://my.clevelandclinic.org/health/body/12148-sleep-basics" target="_blank"
+                        >Sleep</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Last Row -->
+      <tr>
+        <td colspan="2">
+          
+          <a href="https://en.wikipedia.org/wiki/Beer" target="_blank">Beer>>></a>
+        </td>
+        <td colspan="2">
+          <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026" target="_blank">WC</a>
+
+        </td>
+      </tr>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
